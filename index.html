@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>гаме</title>
+</head>
+<body style="background-image: url(minecraft.jpg); background-size: cover;">
+	<div style="height: 200px; width: 200px; background-color: white; position: absolute; top: 0px; left: 0px; border-radius: 15px;">
+		<h1 style="font-family: arial;">ОЧКИ: <span class="num">0</span>
+		</h1>
+		<p style="font-family: arial;" class="first">Палка
+		</p>
+		<p style="font-family: arial;" class="second">Листья
+		</p>
+		<p style="font-family: arial;" class="thirth">Цветок
+		</p>
+		<p style="font-family: arial;" class="fourth">Семена
+		</p>	
+	</div>
+	<img src="stick.png" style="height: 50px; position: absolute; top: 395px; left: 894px;" class="stick">
+	<img src="leaf.png" style="height: 100px; position: absolute; top: 415px; left: 234px;" class="leaf">
+	<img src="flower.png" style="height: 100px; position: absolute; top: 342px; left: 600px;" class="flower">
+	<img src="seed.png" style="height: 50px; position: absolute; top: 376px; left: 89px" 	class="seed">
+
+	<script type="text/javascript">
+		let score=0
+		document.querySelector('.stick').onclick=function(){
+			document.querySelector('.stick').style.display="none"
+			score=score+1
+			alert("Ты нашел палку")
+			document.querySelector('.num').innerHTML=score
+			document.querySelector('.first').style.textDecoration="line-through"
+		}
+
+		document.querySelector('.leaf').onclick=function(){
+			document.querySelector('.leaf').style.display="none"
+			score=score+1
+			alert("Ты нашел листья")
+			document.querySelector('.num').innerHTML=score
+			document.querySelector('.second').style.textDecoration="line-through"
+		}
+
+		document.querySelector('.flower').onclick=function(){
+			document.querySelector('.flower').style.display="none"
+			score=score+1
+			alert("Ты нашел цветок")
+			document.querySelector('.num').innerHTML=score
+			document.querySelector('.thirth').style.textDecoration="line-through"
+		}
+
+		document.querySelector('.seed').onclick=function(){
+			document.querySelector('.seed').style.display="none"
+			score=score+1
+			alert("Ты нашел семена")
+			document.querySelector('.num').innerHTML=score
+			document.querySelector('.fourth').style.textDecoration="line-through"
+		}
+	</script>
+</body>
+</html>
